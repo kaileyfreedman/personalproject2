@@ -24,11 +24,16 @@ At a high level the game works in the following way:
 # Flow Charts
 ![Project Proposal 2 Flow Chart](images/flowchart1.jpg)
 ![Project Proposal 2 Flow Chart](images/flowchart2.jpg)
-![Project Proposal 2 Flow Chart](images/flowchart3.jpg)
 
 ## Methods and Classes
 
 void GetRandomWord()
+Randomly generates a random word to be guessed.
 string GetGuess(string correctWord)
+Asks the user to make a guess and validates the input before returning the guess.
 void DisplayInfo(string guess, string correct)
+Given a guess and the correct word to be guessed, displays the guess to the screen coloring each character based on its position and if it is in the correct word.
 void DisplayCharInfo(char guess, int pos, string correct)
+Given a guessed character, the position of that guess, and the correct word, select the correct color for the guess and write it to the console.
+
+
