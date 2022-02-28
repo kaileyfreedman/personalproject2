@@ -4,9 +4,30 @@ namespace personalproject2
 {
     class Program
     {
+        public static void TestAll()
+        {
+            bool testGetRandomWord = TestGetRandomWord.RunTest();
+            Console.WriteLine($"Test LoadFile(filename):{testGetRandomWord}");
+
+            bool testGetGuess = TestGetGuess.RunTest();
+            Console.WriteLine($"Test LoadFile(filename):{testGetGuess}");
+
+            bool testDisplayInfo = TestDisplayInfo.RunTest();
+            Console.WriteLine($"Test LoadFile(filename):{testDisplayInfo}");
+
+            bool testDisplayCharInfo = TestDisplayCharInfo.RunTest();
+            Console.WriteLine($"Test LoadFile(filename):{testDisplayCharInfo}");
+        }
+
         static void Main(string[] args)
         {
+            if (args.Length > 0 && args [0] == "test")
+            {
+                TestAll();
+                return;
+            }
         }
+
         /// <summary>
         /// Randomly generates a random word to be guessed.
         /// </summary>
@@ -17,6 +38,7 @@ namespace personalproject2
             // Generate a random number between 0 and words.Count and store the result in a variable called ix
             // Return the word at position ix. (e.g. words[ix])
         }
+
         /// <summary>
         /// Asks the user to make a guess and validates the input before returning the guess.
         /// </summary>
@@ -28,6 +50,7 @@ namespace personalproject2
             // Otherwise, display an error message and ask them to make another guess.
             return null;
         }
+
         /// <summary>
         /// Given a guess and the correct word to be guessed, displays the guess to the screen coloring each character based on its position and if it is in the correct word.
         /// </summary>
@@ -38,6 +61,7 @@ namespace personalproject2
             // If they match, iterate through each character:
             // Use the DisplayCharInfo method to determine what color to print the character
         }
+        
         /// <summary>
         /// Given a guessed character, the position of that guess, and the correct word, select the correct color for the guess and write it to the console.
         /// </summary>
