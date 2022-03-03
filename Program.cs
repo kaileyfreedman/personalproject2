@@ -32,11 +32,33 @@ namespace personalproject2
         /// Randomly generates a random word to be guessed.
         /// </summary>
         public static void GetRandomWord()
+        // public static string GetRandomWord(List<string> words = new List<string>());
+
         {
-            // 1. Load a filed called words.txt
-            // Store each line as a separate word in a list named words
-            // Generate a random number between 0 and words.Count and store the result in a variable called ix
-            // Return the word at position ix. (e.g. words[ix])
+            List<string> words = new List<string>();
+
+            words.Add("ahead");
+            words.Add("break");
+            words.Add("alone");
+            words.Add("glass");
+            words.Add("chart");
+            words.Add("horse");
+            words.Add("giant");
+            words.Add("focus");
+            words.Add("moral");
+            words.Add("night");
+            words.Add("youth");
+            words.Add("smile");
+            words.Add("laugh");
+            words.Add("valid");
+            words.Add("truth");
+            words.Add("stone");
+
+            Random generator = new Random();
+            int index = generator.Next(0, words.Count);
+
+            string randomWord = words[index];
+            Console.WriteLine($"Your word in {randomWord}");
         }
 
         /// <summary>
@@ -44,11 +66,28 @@ namespace personalproject2
         /// </summary>
         public static string GetGuess(string correctWord)
         {
+            int userGuess;
+            do
+            {
+                Console.Write("Enter a guess that is 5 letters long:");
+                string input = Console.ReadLine();
+                bool isGuess = int.TryParse(input, out userGuess);
+                
+                if (isGuess == false)
+                {
+                    Console.Error.WriteLine("You did not enter guess.");
+                }
+                else if (userGuess != 5)
+                {
+                    Console.WriteLine("That guess is not 5 letters long.");
+                }
+
+            return userGuess;
+
             // Prompt the user to make a guess
             // Read input from the keyboard and store the results in a variable named guess
             // If guess is the correct length (the guess and random word should be the same length), return the guess.
             // Otherwise, display an error message and ask them to make another guess.
-            return null;
         }
 
         /// <summary>
