@@ -13,7 +13,7 @@ namespace personalproject2
             Program.DisplayCharInfo('e', 5, "frame");
             Console.WriteLine($"You should expect to see a green E");
 
-            Program.DisplayCharInfo('p', 5, "train");
+            Program.DisplayCharInfo('p', 3, "train");
             Console.WriteLine($"You should expect to see a red P");
 
             return false;

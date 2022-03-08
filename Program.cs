@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace personalproject2
 {
@@ -21,7 +22,7 @@ namespace personalproject2
 
         static void Main(string[] args)
         {
-            if (args.Length > 0 && args [0] == "test")
+            if (args.Length > 0 && args[0] == "test")
             {
                 TestAll();
                 return;
@@ -31,9 +32,8 @@ namespace personalproject2
         /// <summary>
         /// Randomly generates a random word to be guessed.
         /// </summary>
-        public static void GetRandomWord()
-        // public static string GetRandomWord(List<string> words = new List<string>());
-
+        public static string GetRandomWord()
+    
         {
             List<string> words = new List<string>();
 
@@ -59,6 +59,8 @@ namespace personalproject2
 
             string randomWord = words[index];
             Console.WriteLine($"Your word in {randomWord}");
+            
+            return randomWord;
         }
 
         /// <summary>
@@ -66,28 +68,24 @@ namespace personalproject2
         /// </summary>
         public static string GetGuess(string correctWord)
         {
-            int userGuess;
-            do
-            {
-                Console.Write("Enter a guess that is 5 letters long:");
-                string input = Console.ReadLine();
-                bool isGuess = int.TryParse(input, out userGuess);
-                
-                if (isGuess == false)
-                {
-                    Console.Error.WriteLine("You did not enter guess.");
-                }
-                else if (userGuess != 5)
-                {
-                    Console.WriteLine("That guess is not 5 letters long.");
-                }
-
-            return userGuess;
-
             // Prompt the user to make a guess
             // Read input from the keyboard and store the results in a variable named guess
             // If guess is the correct length (the guess and random word should be the same length), return the guess.
             // Otherwise, display an error message and ask them to make another guess.
+            string input;
+            do
+            {
+                Console.Write("Enter a guess that is 5 letters long:");
+                input = Console.ReadLine();
+
+                if (input.Length != 5)
+                {
+                    Console.WriteLine("That guess is not 5 letters long.");
+                }
+            }
+            while (input.Length != 5);
+        
+            return input;
         }
 
         /// <summary>
@@ -99,8 +97,21 @@ namespace personalproject2
             // If the lengths do not match, throw an exception
             // If they match, iterate through each character:
             // Use the DisplayCharInfo method to determine what color to print the character
+            if (guess.Length != correct.Length)
+            {
+            throw new Exception ("The guess is not the same length as the correct word.");
+            }
+            else
+            {
+                int ix = 0;
+                foreach (char c in guess)
+                {
+                    DisplayCharInfo(c, ix, correct);
+                    ix = ix+1; 
+                }
+            }
         }
-        
+
         /// <summary>
         /// Given a guessed character, the position of that guess, and the correct word, select the correct color for the guess and write it to the console.
         /// </summary>
