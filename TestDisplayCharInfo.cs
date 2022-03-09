@@ -10,7 +10,7 @@ namespace personalproject2
             Program.DisplayCharInfo('a', 1, "chart");
             Console.WriteLine($"You should expect to see a yellow A");
 
-            Program.DisplayCharInfo('e', 5, "frame");
+            Program.DisplayCharInfo('e', 4, "frame");
             Console.WriteLine($"You should expect to see a green E");
 
             Program.DisplayCharInfo('p', 3, "train");

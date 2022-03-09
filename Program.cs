@@ -27,6 +27,16 @@ namespace personalproject2
                 TestAll();
                 return;
             }
+            
+            string correct = GetRandomWord(); 
+            string guess = "";
+            while  (guess!= correct)
+            {
+
+                guess = GetGuess(correct);
+                DisplayInfo(guess, correct);
+                Console.WriteLine();
+            }
         }
 
         /// <summary>
@@ -58,8 +68,7 @@ namespace personalproject2
             int index = generator.Next(0, words.Count);
 
             string randomWord = words[index];
-            Console.WriteLine($"Your word in {randomWord}");
-            
+
             return randomWord;
         }
 
@@ -122,6 +131,22 @@ namespace personalproject2
             // If the guess is not in the correct word, select red.
             // Display the guess
             // Reset the color back to white before returning
+            if (guess == correct[pos]) 
+            {
+
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else if (correct.Contains(guess))
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+
+            }
+            Console.Write(guess);
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
