@@ -1,0 +1,15 @@
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/bin/Debug/net5.0/personalproject2.deps.json
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/bin/Debug/net5.0/personalproject2.runtimeconfig.json
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/bin/Debug/net5.0/personalproject2.runtimeconfig.dev.json
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/bin/Debug/net5.0/personalproject2.dll
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/bin/Debug/net5.0/ref/personalproject2.dll
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/bin/Debug/net5.0/personalproject2.pdb
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/personalproject2.csproj.AssemblyReference.cache
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/personalproject2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/personalproject2.AssemblyInfoInputs.cache
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/personalproject2.AssemblyInfo.cs
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/personalproject2.csproj.CoreCompileInputs.cache
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/personalproject2.dll
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/ref/personalproject2.dll
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/personalproject2.pdb
+/Users/kaileyfreedman-setaro/Documents/GitHub/personalproject2/obj/Debug/net5.0/personalproject2.genruntimeconfig.cache
